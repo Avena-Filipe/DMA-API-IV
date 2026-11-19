@@ -1,0 +1,28 @@
+{
+  "name": "dma-api-iv",
+  "version": "1.0.0",
+  "description": "API REST de tecnologias de programacao com JWT e frontend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "check": "node --check src/server.js && node --check src/config/database.js && node --check src/models/Tecnologia.js && node --check src/middlewares/auth.js && node --check public/app.js && node --check tests/api.test.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "private": true
+}
