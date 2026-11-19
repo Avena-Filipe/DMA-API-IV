@@ -1,0 +1,18 @@
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#1e293b;background:#f1f5f9}
+*{box-sizing:border-box}body{margin:0;line-height:1.5}.container{max-width:1050px;margin:32px auto;padding:0 18px}
+header{margin:0 0 24px}.kicker{font-size:.78rem;color:#1d4ed8;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin:0 0 8px}
+h1{font-size:clamp(1.6rem,4vw,2.25rem);margin:0}h2{font-size:1.12rem;margin:0 0 15px}
+.intro,.hint{color:#475569}.intro{margin:4px 0 12px}.hint{font-size:.87rem;margin:12px 0 0}
+.card{background:#fff;border:1px solid #dae3ed;border-radius:12px;padding:22px;margin-bottom:18px;box-shadow:0 3px 12px #0f172a0a}
+.form{display:flex;gap:12px;flex-wrap:wrap;align-items:end}.form label{display:grid;gap:5px;flex:1 1 150px;font-weight:600;font-size:.88rem}
+input{width:100%;padding:10px 12px;border:1px solid #b6c4d6;border-radius:7px;font:inherit;min-height:43px}
+button{border:1px solid #1d4ed8;background:#1d4ed8;color:white;border-radius:7px;padding:10px 14px;font:inherit;font-weight:600;cursor:pointer;min-height:43px}
+button.secondary{background:#fff;color:#1d4ed8}button.danger{background:#fff;border-color:#ef9a9a;color:#a31f1f}
+button.small{min-height:34px;padding:6px 10px;font-size:.84rem}button:hover{filter:brightness(.95)}
+.status{display:inline-block;background:#fce8e8;color:#8c2626;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.86rem}
+.status.ativo{background:#e0f5e9;color:#146c3e}.heading-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.heading-row h2{margin:0}.table-wrap{overflow-x:auto}table{width:100%;min-width:600px;border-collapse:collapse}
+th,td{border-bottom:1px solid #e2e8f0;text-align:left;padding:11px}th{color:#475569;font-size:.85rem}
+td.acoes{display:flex;gap:8px}#mensagem{min-height:24px;font-weight:600}#mensagem.erro{color:#a31f1f}#mensagem.sucesso{color:#126840}
+button:focus-visible,input:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
+@media(max-width:650px){.card{padding:16px}}

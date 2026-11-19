@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRUD de Tecnologias de Programação</title>
+<link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body><main class="container">
+<header>
+  <p class="kicker">Projeto acadêmico • API REST • JWT</p>
+  <h1>Cadastro de tecnologias</h1>
+  <p class="intro">Gerencie tecnologias de programação, a linguagem-base e a curva estimada de aprendizado.</p>
+  <span id="statusLogin" class="status" aria-live="polite">Não autenticado</span>
+</header>
+<section class="card">
+  <h2>1. Autenticação</h2>
+  <form id="formLogin" class="form">
+    <label>Usuário <input id="usuario" autocomplete="username" required></label>
+    <label>Senha <input id="senha" type="password" autocomplete="current-password" required></label>
+    <button type="submit">Entrar</button>
+    <button id="sair" type="button" class="secondary">Sair</button>
+  </form>
+</section>
+<section class="card">
+  <h2>2. Cadastrar ou editar tecnologia</h2>
+  <form id="formTecnologia" class="form">
+    <input id="tecnologiaId" type="hidden">
+    <label>Nome da tecnologia <input id="nome" placeholder="React" maxlength="100" required></label>
+    <label>Base <input id="base" placeholder="JavaScript" maxlength="100" required></label>
+    <label>Curva de aprendizado (meses) <input id="curvaAprendizado" type="number" min="1" max="240" step="1" placeholder="6" required></label>
+    <button type="submit" id="salvar">Cadastrar</button>
+    <button type="button" id="cancelarEdicao" class="secondary">Cancelar edição</button>
+  </form>
+  <p class="hint">A curva de aprendizado é uma estimativa informada por quem cadastra, não um prazo universal.</p>
+</section>
+<section class="card">
+  <div class="heading-row">
+    <h2>3. Tecnologias cadastradas</h2>
+    <button id="recarregar" type="button" class="secondary">Atualizar tabela</button>
+  </div>
+  <div class="table-wrap">
+    <table><thead><tr><th>Nome</th><th>Base</th><th>Curva de aprendizado</th><th>Ações</th></tr></thead>
+    <tbody id="listaTecnologias"></tbody></table>
+  </div>
+</section>
+<p id="mensagem" role="status" aria-live="polite"></p>
+</main></body></html>
